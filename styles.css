@@ -1,0 +1,50 @@
+body {
+  background: darkcyan;
+  color:  gold;
+  text-align: center;
+  margin: 0;
+  font-family: 'Piedra', cursive;
+}
+/* . means class */
+.hero img {
+  border-radius: 100%;
+  width:30%;
+  height:30%;
+}
+.hero-img {
+  background:white;
+  width:26vw;
+  height:26vw;
+  display: inline-block;
+  background-size: 100%;
+  background-position: 0% 50%;
+  border-radius: 100%;
+  border: 2vw solid gold;
+  margin: 0 1vw;
+}
+.hero-img.monkey {
+  background-image: url("monkey.jpg");
+}
+.hero-img.normal {
+  background-image: url("normal.JPG")
+}
+.hero-img.bonk{
+  background-image: url("bonk.PNG")
+}
+/*  . is for class space is for nested element*/
+.hero h1 {
+  font-size: 10vw;
+  letter-spacing: 0.5vw;
+  margin-bottom: 0;
+  margin-top: 1vw;
+}
+.hero p{
+  font-size: 3vw;
+  margin-top: 1vw;
+}
+.hero{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
