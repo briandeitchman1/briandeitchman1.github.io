@@ -5,6 +5,21 @@ body {
   margin: 0;
   font-family: 'Piedra', cursive;
 }
+ul{
+  list-style-type: none;
+}
+a{
+  font-size: 200%;
+}
+a:link, a:visited{
+  color: darkslateblue;
+  text-decoration: none;
+}
+
+a:hover{
+  color: darkred;
+  text-decoration: none;
+}
 /* . means class */
 .hero img {
   border-radius: 100%;
