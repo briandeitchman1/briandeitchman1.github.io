@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: 'Piedra', cursive;
 }
+
 ul{
   list-style-type: none;
 }
@@ -39,7 +40,7 @@ a:hover{
 }
 
 .hero-img.normal {
-  background-image: url("normal.jpg");
+  background-image: url("../smile.jpg");
 } 
 
 /*  . is for class space is for nested element*/
