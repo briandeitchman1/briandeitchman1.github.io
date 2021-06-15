@@ -46,7 +46,6 @@ let currentRotation = 0;
 let random = Math.floor(Math.random()*theTetrominoes.length)
 let current = theTetrominoes[random][currentRotation]
 
-console.log(random)
 
 //draw the tetromino
 function draw()
@@ -66,6 +65,29 @@ function undraw(){
 // make the tetromino move down
 
 timerID = setInterval(moveDown,1000)
+
+//assign functions to Keycodes
+document.addEventListener('keydown',control)
+function control(e){
+   console.log(e.key)
+  if(e.key === "ArrowLeft"){
+    moveLeft()
+  }
+  else if(e.key === "ArrowUp")
+  {
+    //rotate()
+  }
+  else if(e.key ==="ArrowRight")
+  {
+    moveRight()
+  }
+  else if(e.key === "ArrowDown")
+  {
+    //moveDown()
+  }
+  
+}
+
 
 //move down function
 
@@ -92,9 +114,35 @@ function freeze()
 
 draw()
 
+//move the tetromino
+function moveLeft()
+{
+  undraw()
+  const isAtLeftEdge = current.some(index => ( currentPosition + index) % width === 0)
+  if(!isAtLeftEdge){
+    currentPosition -=1
+  }
+  if(current.some(index => squares[currentPosition + index].classList.contains('taken')))
+  {
+    currentPosition +=1;
+  }
+  draw()
+}
 
-console.log(theTetrominoes)
-
+function moveRight()
+{
+  undraw()
+  const isAtRightEdge = current.some(index => (currentPosition + index)%width === width-1)
+  if(!isAtRightEdge)
+  {
+    currentPosition +=1
+  }
+  if(current.some(index => squares[currentPosition + index].classList.contains('taken'))){
+    currentPosition -=1
+  }
+  draw()
+ 
+}
 
 
 
